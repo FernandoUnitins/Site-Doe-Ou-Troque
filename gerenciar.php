@@ -209,17 +209,17 @@ $result = $stmt->get_result();
         <?php while ($item = $result->fetch_assoc()): ?>
           <tr>
             <td>
-              <?php if (!empty($item['imagem']) && file_exists($item['imagem'])): ?>
+              <?php if (!empty($item['imagem'] ?? '') && file_exists($item['imagem'])): ?>
                 <img src="<?= htmlspecialchars($item['imagem']) ?>" alt="Imagem" class="img-preview">
               <?php else: ?>
                 <img src="img/no-image.png" alt="Sem imagem" class="img-preview">
               <?php endif; ?>
             </td>
-            <td><?= htmlspecialchars($item['nome']) ?></td>
-            <td><?= htmlspecialchars($item['tipo']) ?></td>
-            <td><?= htmlspecialchars($item['categoria']) ?></td>
-            <td><?= htmlspecialchars($item['condicao']) ?></td>
-            <td><?= htmlspecialchars($item['status_atual']) ?></td>
+            <td><?= htmlspecialchars($item['nome'] ?? '') ?></td>
+            <td><?= htmlspecialchars($item['tipo'] ?? '') ?></td>
+            <td><?= htmlspecialchars($item['categoria'] ?? '') ?></td>
+            <td><?= htmlspecialchars($item['condicao'] ?? '') ?></td>
+            <td><?= htmlspecialchars($item['status_atual'] ?? '') ?></td>
             
             <td><?= date('d/m/Y', strtotime($item['data_cadastro'])) ?></td>
             <td class="actions">
