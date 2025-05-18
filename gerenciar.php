@@ -209,8 +209,8 @@ $result = $stmt->get_result();
         <?php while ($item = $result->fetch_assoc()): ?>
           <tr>
             <td>
-              <?php if (!empty($item['imagem'] ?? '') && file_exists($item['imagem'])): ?>
-                <img src="<?= htmlspecialchars($item['imagem']) ?>" alt="Imagem" class="img-preview">
+              <?php if (!empty($item['imagem']) && file_exists($item['imagem'])): ?>
+                <img src="<?= htmlspecialchars($item['imagem']?? '') ?>" alt="Imagem" class="img-preview">
               <?php else: ?>
                 <img src="img/no-image.png" alt="Sem imagem" class="img-preview">
               <?php endif; ?>
