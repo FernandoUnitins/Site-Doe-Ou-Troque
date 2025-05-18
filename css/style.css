@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Estilo global do corpo da página */
+body {
+  font-family: 'Mulish', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Navbar Estilizada */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 8%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* Estilo do logo */
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-shadow: 0 3px 5px rgba(128, 128, 128, 0.415);
+}
+
+/* Cor específica para parte do texto do logo */
+.logo span {
+  color: #89c5cc;
+}
+
+/* Estilo dos links da navegação */
+.nav-links a {
+  margin-left: 3rem;
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  position: relative;
+}
+
+/* Classe para destacar texto */
+.highlight {
+  color: #76b6c4;
+}
+
+/* Estilo da seção hero (principal) */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 8%;
+  max-width: 1440px;
+  margin: 0 auto;
+  gap: 4rem;
+}
+
+/* Estilo do conteúdo da seção hero */
+.hero-content {
+  flex: 1;
+  text-align: left;
+}
+
+/* Estilo do título principal */
+h1 {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+/* Cor específica para parte do texto do título */
+h1 span {
+  color: #76b6c4;
+}
+
+/* Estilo do parágrafo na seção hero */
+.hero p {
+  font-family: 'Mulish', sans-serif;
+  font-size: 1.25rem;
+
+  margin-bottom: 3rem;
+  line-height: 1.8;
+}
+
+/* Estilo do botão zap */
+.zap-button {
+  background: #69b99d;
+  color: white;
+  padding: 1.2rem 2.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Efeito de hover no botão zap */
+.zap-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 3px 5px rgba(128, 128, 128, 0.415);
+}
+
+/* Estilo da imagem na seção hero */
+.hero-image {
+  flex: 1;
+  max-width: 600px;
+  height: auto;
+}
+
+/* Estilo do rodapé */
+footer {
+  background: linear-gradient(#ffffff, #e3fff861);
+  color: rgb(0, 0, 0);
+  padding: 2rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+/* Estilo dos links no rodapé */
+footer a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: opacity 0.3s;
+}
+
+/* Responsividade para telas menores que 1024px */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    text-align: left;
+    padding: 4rem 5%;
+  }
+
+  .hero-content {
+    text-align: left;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+}
+
+/* Responsividade para telas menores que 768px */
+@media (max-width: 768px) {
+  nav {
+    padding: 1.5rem 5%;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .zap-button {
+    margin: 0 auto;
+  }
+}
+
+/* Efeito de transição de opacidade ao carregar a página */
+body:not(.loaded) {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+body.loaded {
+  opacity: 1;
+}
