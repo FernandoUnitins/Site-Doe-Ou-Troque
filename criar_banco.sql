@@ -30,7 +30,6 @@ CREATE TABLE IF NOT EXISTS `seminario`.`usuario` (
   PRIMARY KEY (`id_usuario`),
   UNIQUE INDEX `email` (`email` ASC) VISIBLE)
 ENGINE = InnoDB
-AUTO_INCREMENT = 8
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -58,7 +57,6 @@ CREATE TABLE IF NOT EXISTS `seminario`.`item` (
     REFERENCES `seminario`.`usuario` (`id_usuario`)
     ON DELETE CASCADE)
 ENGINE = InnoDB
-AUTO_INCREMENT = 67
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -87,7 +85,6 @@ CREATE TABLE IF NOT EXISTS `seminario`.`solicitacao` (
     REFERENCES `seminario`.`usuario` (`id_usuario`)
     ON DELETE CASCADE)
 ENGINE = InnoDB
-AUTO_INCREMENT = 57
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
